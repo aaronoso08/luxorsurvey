@@ -1,0 +1,23 @@
+
+
+  button{
+    font-family: 'Work Sans', sans-serif;
+      font-size: 22px;
+      background-color: rgb(30, 32, 33);
+      color: #fff;
+      border: 0px;
+      border-radius: 7px;
+      padding: 20px;
+      cursor: pointer;
+      margin-bottom: 20px;
+  }
+  button:hover{
+    transform: scale(1.1);
+  }
+ 
+
+
+
+
+
+

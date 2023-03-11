@@ -1,0 +1,96 @@
+  .modal-header {
+    background-color: rgb(246, 246, 246);
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
+  
+  .modal-title {
+    font-size: 13px;
+  }
+
+   .modal-body {
+    
+    background-size: cover;
+  }
+
+ .modal-content {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 190px;
+  background-size: contain;
+    } 
+
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('https://luxorsurveyapp-storage-48413d43211922-luxordev.s3.amazonaws.com/public/background-luxor.png') center fixed;
+      align-items: center;
+    }
+  
+    /* .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('https://luxorsurveyapp-storage-48413d43211922-luxordev.s3.amazonaws.com/public/background-luxor.png') center fixed;
+      align-items: center;
+    }
+
+  
+     .modal-content {
+      position: absolute;
+      top: 48%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 280px;
+      height: 190px;
+      background: url('https://luxorsurveyapp-storage-48413d43211922-luxordev.s3.amazonaws.com/public/popupbackground.png') center fixed;
+      background-size: contain;
+    }
+ */
+
+
+    .submit-button {
+      background-color: rgb(255, 0, 0);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 9px 20px;
+      width: 100%;
+      text-align: center; 
+      font-size: 11px;
+    }
+
+
+    .submit-button-container {
+      width: 40%;
+      float: right;
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+    }
+    
+    .submit-button:hover {
+      background-color: rgba(197, 12, 12, 0.8);
+      cursor: pointer;
+    }
+    
+    

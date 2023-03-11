@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-luxorsurveyapp-staging-214522-authRole",
+      "UnauthRoleArn": "arn:aws:iam::796760918760:role/amplify-luxorsurveyapp-staging-214522-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::796760918760:role/amplify-luxorsurveyapp-staging-214522-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-luxorsurveyapp-staging-214522-deployment",
+      "UnauthRoleName": "amplify-luxorsurveyapp-staging-214522-unauthRole",
+      "StackName": "amplify-luxorsurveyapp-staging-214522",
+      "StackId": "arn:aws:cloudformation:us-east-1:796760918760:stack/amplify-luxorsurveyapp-staging-214522/3294b2e0-bc68-11ed-baae-0a1578cbb03f",
+      "AmplifyAppId": "d2kjbvmmxsi8sm"
+    },
+    "categories": {
+      "auth": {
+        "luxorsurveyapp": {}
+      }
+    }
+  }
+}

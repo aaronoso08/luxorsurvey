@@ -1,0 +1,55 @@
+type Answer8 {
+  Answer: String
+  Answer8: String
+}
+
+type Answer7 {
+  Answer: String
+  Answer7: String
+  untitledfield: Answer8
+}
+
+type Answer6 {
+  Answer: String
+  Answer6: String
+  untitledfield: Answer7
+}
+
+type Answer5 {
+  Answer: String
+  Answer5: String
+  untitledfield: Answer6
+}
+
+type Answer4 {
+  Answer: String
+  Answer4: String
+  untitledfield: Answer5
+}
+
+type Answer3 {
+  Answer: String
+  Answer3: String
+  untitledfield: Answer4
+}
+
+type Answer2 {
+  Answer: String
+  Answer2: String
+  untitledfield: Answer3
+}
+
+type Answer1 {
+  Answer: String
+  Answer1: String
+  untitledfield: Answer2
+}
+
+type Information @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  FullName: String
+  RepID: String
+  Date: String
+  untitledfield: Answer1
+}
+ 

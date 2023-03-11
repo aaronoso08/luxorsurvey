@@ -1,0 +1,169 @@
+
+
+:root {
+  --amplify-primary-color: #000000;
+  --amplify-primary-tint: #000000;
+  --amplify-primary-shade: #000000;
+  --amplify-background-color: #2f2f2f; /* change this to a shade of gray */
+}
+
+
+
+
+body {
+  background: url('https://luxorsurveyapp-storage-48413d43211922-luxordev.s3.amazonaws.com/public/background-luxor.png') center fixed;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: black !important;
+}
+
+a:hover,
+button:hover {
+  color: black;
+}
+
+
+
+.answers {
+  background-color: #080808;
+  color: #d62424;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+
+[data-amplify-authenticator] {
+  --amplify-colors-background-primary: var(--amplify-colors-black);
+  --amplify-colors-background-secondary: var(--amplify-colors-neutral-100);
+
+  --amplify-components-tabs-item-active-border-color: var(--amplify-background-black);
+  --amplify-components-tabs-item-active-color: var(--amplify-colors-black);
+
+  --amplify-components-tabs-item-hover-color: var(--amplify-colors-black);
+  --amplify-components-button-hover-color: var(--amplify-colors-font-focus);
+
+  --amplify-components-tabs-item-active-color: var(--amplify-colors-black);
+}
+
+[data-amplify-authenticator] .sign-in-sign-up-header h2 {
+  color: var(--amplify-colors-white);
+}
+
+[data-amplify-authenticator] .forgot-password {
+  color: var(--amplify-colors-black);
+}
+
+
+/* 
+.amplify-tabs {
+  display: none;
+} */
+
+
+/* .amplify-button[data-variation='primary'] {
+  background: linear-gradient(
+    to right,
+    var(--amplify-colors-green-80),
+    var(--amplify-colors-orange-40)
+  );
+} */
+
+
+[data-amplify-authenticator] {
+  --amplify-colors-background-primary: #444444;
+  --amplify-colors-background-secondary: #555555;
+  --amplify-components-button-primary-background-color: #777777;
+  --amplify-components-button-primary-hover-background-color: #888888;
+  --amplify-components-button-primary-focus-background-color: #888888;
+  --amplify-components-button-primary-active-background-color: #999999;
+  --amplify-components-button-link-color: #777777;
+  --amplify-components-button-link-hover-color: #888888;
+  --amplify-components-button-link-focus-color: #888888;
+  --amplify-components-button-link-active-color: #999999;
+  --amplify-components-button-link-active-background-color: transparent;
+  --amplify-components-button-link-focus-background-color: transparent;
+  --amplify-components-button-link-hover-background-color: transparent;
+  --amplify-colors-font-interactive: #FFFFFF;
+}
+
+[data-amplify-authenticator] .sign-in-sign-up-header h2 {
+  color: #FFFFFF;
+  
+}
+
+[data-amplify-authenticator] .forgot-password {
+  color: #000000;
+}
+
+
+
+
+
+.amplify-heading--2 {
+  font-weight: var(--amplify-font-weights-thin);
+}
+.amplify-text {
+  font-weight: var(--amplify-font-weights-bold);
+}
+
+
+
+[data-amplify-authenticator] .sign-in-sign-up-header .amplify-form-submit-button:hover {
+  background-color: black;
+  color: black;
+  background-color: black !important;
+}
+
+
+
+
+.amplify-label {
+  color: var(--amplify-components-field-label-color);
+}
+
+
+.amplify-textfield {
+  flex-direction: column;
+  --amplify-components-fieldcontrol-color: var( --amplify-components-textfield-color );
+  --amplify-components-fieldcontrol-border-color: var( --amplify-components-textfield-border-color );
+  --amplify-components-fieldcontrol-font-size: var( --amplify-components-textfield-font-size );
+  --amplify-components-fieldcontrol-focus-border-color: var( --amplify-components-textfield-focus-border-color );
+}
+
+
+.amplify-field {
+  font-size: var(--amplify-components-field-font-size);
+  gap: var(--amplify-components-field-gap);
+}
+
+.amplify-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  justify-items: center;
+  align-items: center;
+}
+
+.amplify-grid-item {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.amplify-text {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+}
