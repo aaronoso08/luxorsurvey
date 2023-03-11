@@ -2,6 +2,8 @@
 import React, { useRef, useState } from 'react';
 import Webcam from 'react-webcam';
 
+
+
 const videoConstraints = {
   facingMode: 'user',
   height: 460,
@@ -36,5 +38,6 @@ const MyWebcam = () => {
 };
 
 export default MyWebcam;
+
 
 

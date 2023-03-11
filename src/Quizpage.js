@@ -30,7 +30,7 @@ const QuizPage = ({ surveyData, signOut }) => {
 
     {
       question1: "Hi thank you for choosing Luxor Energy the most reliable solar provider in North America. This call is being recorded for quality assurance. Do we have your permission to proceed?",
-      question2: "To record your response, press Video response",
+      question2: "Press Add Your Response to Submit answer",
       video: "https://luxorsurveyapp-storage-48413d43211922-luxordev.s3.amazonaws.com/public/questionone.mp4",
       webcamContent: <Answer1 className="my-form"
       style={{
@@ -46,7 +46,7 @@ const QuizPage = ({ surveyData, signOut }) => {
     },
     {
       question1: "Please state the address where your solar project will be taking place",
-      question2: "To submit your answer, simply press the Video Response button and submit your address.",
+      question2: "To submit your answer, simply press the Add Your Response button and submit your address.",
       video: "https://luxorsurveyapp-storage-48413d43211922-luxordev.s3.amazonaws.com/public/questiontwo.mp4",
       webcamContent: <Answerfulladdress className="my-form"
       style={{
@@ -61,7 +61,7 @@ const QuizPage = ({ surveyData, signOut }) => {
     },
     {
       question1: "Following questions may be answered either yes or no. Luxor Energy does not guarantee a specific panel or the exact number of panels. Luxor Energy will install the exact system size or larger that was sold by your representative. Is that correct?",
-      question2: "To record your response, press Video response",
+      question2: "Press Add Your Response to Submit answer",
       video: "https://luxorsurveyapp-storage-48413d43211922-luxordev.s3.amazonaws.com/public/questionthree.mp4",
       webcamContent: <Answer2 className="my-form"
       style={{
@@ -76,7 +76,7 @@ const QuizPage = ({ surveyData, signOut }) => {
     },
     {
       question1: "Luxor Energy will install panels on planes most suitable for your home's location. For maximum production. And the most efficient layout. While complying with any and all applicable building code regulations. Is that correct?",
-      question2: "To record your response, press Video response",
+      question2: "Press Add Your Response to Submit answer",
       video: "https://luxorsurveyapp-storage-48413d43211922-luxordev.s3.amazonaws.com/public/questionfour.mp4",
       webcamContent: <Answer4 className="my-form"
       style={{
@@ -90,7 +90,7 @@ const QuizPage = ({ surveyData, signOut }) => {
     },
     {
       question1: "Does Luxor Energy have permission to install without anyone being home? Yes or no",
-      question2: "To record your response, press Video response",
+      question2: "Press Add Your Response to Submit answer",
       video: "https://luxorsurveyapp-storage-48413d43211922-luxordev.s3.amazonaws.com/public/questionfive.mp4",
       webcamContent: <Answer4 className="my-form"
       style={{
@@ -104,15 +104,23 @@ const QuizPage = ({ surveyData, signOut }) => {
     },
     {
       question1: "Will the gate be open for installation?",
-      question2: "To provide your response, you can utilize the Video Response feature by pressing the designated button",
+      question2: "To provide your response, you can utilize the Add Your Response feature by pressing the designated button",
       video: "https://luxorsurveyapp-storage-48413d43211922-luxordev.s3.amazonaws.com/public/questionsix.mp4",
-      webcamContent: <Answer5 />,
+      webcamContent: <Answer5 className="my-form"
+      style={{
+        backgroundColor: '#fff',
+        color: '#000',
+        borderRadius: '5px',
+        marginBottom: '28px',
+        width: '304px',
+      height: '148px',
+      }}/>,
      
  
     },
     { 
       question1: "Did your sales representative promise you anything that was not written in your install agreement? Yes or no.",
-      question2: "To record your response, press Video response",
+      question2:  "Press Add Your Response to Submit answer",
       video: "https://luxorsurveyapp-storage-48413d43211922-luxordev.s3.amazonaws.com/public/questionseven.mp4",
       webcamContent:  <Answer6 className="my-form"
       style={{
@@ -125,6 +133,7 @@ const QuizPage = ({ surveyData, signOut }) => {
       }}/>,
   
     },
+    
   ];
 
   const handleNextQuestion = () => {
@@ -154,16 +163,33 @@ const QuizPage = ({ surveyData, signOut }) => {
   <div className="background-video-container">
     <div className="webcam-wrapper">
       <MyWebcam content={questions[currentQuestion].webcamContent} />
-      <div className="stop-recording-button">
-        <button className="recording-button" onClick={() => setRecording(false)}>
-          Close
-        </button>
+      <div className="recording-icon">
+        <h2>REC</h2>
+        <button className="Rec"></button>
       </div>
+      <div className="response-instruction">
+    Press "Next" after submitting answer for next question
+  </div>
+  <div className="stop-recording-button">
+
+  {currentQuestion === questions.length - 1 ? (
+    <div className="submit-button-container">
+      <button className="submit-button" onClick={() => setShowModal(true)}>
+        Submit Survey
+      </button>
+    </div>
+  ) : (
+    <div className="right-button-container">
+      <button className="right-button" type="button" onClick={handleNextQuestion}>
+        Next
+      </button>
+    </div>
+  )}
+</div>
+      
     </div>
   </div>
-  <div className="submit-button-container">
 
-  </div>
   <div className="submit-addressanswer">
     {questions[currentQuestion].webcamContent}
   </div>
@@ -187,28 +213,16 @@ const QuizPage = ({ surveyData, signOut }) => {
               <div className="left-button-container">
                 <button className="left-button" onClick={handleStartRecording}>
                 {questions[currentQuestion].responseButtonLabel}
-                  Video Response
+                  Add Your Response
                 </button>
               </div>
-              {currentQuestion !== questions.length - 1 && (
-                <div className="right-button-container">
-                  <button className="right-button" type="button" onClick={handleNextQuestion}>
-                    Next
-                  </button>
-                </div>
-              )}
+
             </div>
             <div className="progress-bar-container">
               <ProgressBar currentQuestion={currentQuestion} totalQuestions={questions.length} />
             </div>
           </form>
-          {currentQuestion === questions.length - 1 && (
-            <div className="submit-button-container">
-              <button className="submit-button" onClick={() => setShowModal(true)}>
-                submit survey
-              </button>
-            </div>
-          )}
+
         </div>
       )}
 {showModal && (
